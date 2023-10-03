@@ -1,0 +1,81 @@
+﻿@model cad_cliente.Models.Client
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes do registro</h1>
+
+<div>
+    <h2>Informações do fornecedor</h2>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Razão Social
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SocialReason)
+        </dd>
+        <dt class="col-sm-2">
+            Nome Fantasia
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FantasyName)
+        </dd>
+        <hr />
+            <h2>Informações de contato</h2>
+        <hr />
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            Telefone
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            Nome para contato
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <hr />
+            <h2>Endereço</h2>
+        <hr />
+        <dt class="col-sm-2">
+            CEP
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cep)
+        </dd>
+        <dt class="col-sm-2">
+            Endereço
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Street), Nº
+            @Html.DisplayFor(model => model.NumberStreet) - 
+            @Html.DisplayFor(model => model.SquareName)
+        </dd>
+        <dt class="col-sm-2">
+            Cidade
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CityName) -
+            @Html.DisplayFor(model => model.StateName)
+        </dd>
+        <dt class="col-sm-2">
+            País
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CountryName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+    <a class="btn btn-outline-primary btn-sm" asp-action="Delete" asp-route-id="@Model?.Id">Deletar</a>
+    <a class="btn btn-secondary text-white btn-sm" asp-action="Index">Voltar</a>
+</div>

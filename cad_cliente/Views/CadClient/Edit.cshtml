@@ -1,0 +1,79 @@
+﻿@model cad_cliente.Models.Client;
+@{
+    ViewData["Title"] = "Editar Fornecedor";
+}
+
+<h1>Editar Fornecedor</h1>
+
+<h4>Fornecedor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div class="form-group">
+                <label class="control-label">Nome do Fornecedor</label>
+                <input asp-for="FullName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Nome Fantasia</label>
+                <input asp-for="FantasyName" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Razão Social</label>
+                <input asp-for="SocialReason" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input asp-for="Email" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Telefone</label>
+                <input asp-for="Phone" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Rua</label>
+                <input asp-for="Street" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Número da rua</label>
+                <input asp-for="NumberStreet" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>CEP</label>
+                <input asp-for="Cep" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>País</label>
+                <input asp-for="CountryName" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Cidade</label>
+                <input asp-for="CityName" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Estado</label>
+                <input asp-for="StateName" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label>Bairro</label>
+                <input asp-for="SquareName" class="form-control" />
+
+            </div>
+
+            <div class="form-group" style="padding-top:10px">
+                <input type="submit" value="Alterar" class="btn btn-primary btn-sm" />
+                <a class="btn btn-secondary text-white btn-sm" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
